@@ -8,7 +8,6 @@ import models
 
 
 class BaseModel:
-
     def __init__(self, *args, **kwargs):
         time_format = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uuid4())
