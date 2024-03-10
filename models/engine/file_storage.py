@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module for serializing and deserializing data
+"""
 import json
 import os
 from models.base_model import BaseModel
