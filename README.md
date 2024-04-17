@@ -1,4 +1,4 @@
-# AirBnB Clone ― The ALX-Holberton BnB
+# AirBnB Clone ― ALX Project 
 
 ![Optional Text](./web_static/images/logo.png)
 
