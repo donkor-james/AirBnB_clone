@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for the User class.
+Module for creating User.
 """
 from models.base_model import BaseModel
 
