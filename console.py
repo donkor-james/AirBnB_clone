@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 Module for console
 """
@@ -11,6 +10,7 @@ from models.city import City
 from models.place import Place
 from models.review import Review
 from models.state import State
+from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -46,12 +46,12 @@ class HBNBCommand(cmd.Cmd):
         Usage: create <class_name>
         """
         arg = arg.split()
-        # print(arg)
+        print(arg)
         if not arg:
             print("** class name missing **")
             return
         if arg[0] in HBNBCommand.valid_classnames:
-            new_instance = eval(f"{arg[0]}()")
+            new_instance = eval('{arg[0]}')
             new_instance.save()
             print(new_instance.id)
         else:
@@ -62,9 +62,9 @@ class HBNBCommand(cmd.Cmd):
         Show the string representation of an instance.
         Usage: show <class_name> <id>
         """
-        arg = arg.split()
-        # print(arg)
-        if not arg:
+        # arg = arg.split()
+        print(arg)
+        if len(arg) < 1:
             print("** class name missing **")
             return
         if arg[0] in HBNBCommand.valid_classnames:
@@ -234,5 +234,5 @@ class HBNBCommand(cmd.Cmd):
             return False
 
 
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
+# if __name__ == '__main__':
+HBNBCommand().cmdloop()
