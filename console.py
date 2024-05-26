@@ -200,7 +200,7 @@ class HBNBCommand(cmd.Cmd):
 
     def default(self, arg):
         """
-        Default behavior for cmd module when input is invalid
+        Default behavior for cmd module when input is not valid
         """
         if "." in arg and "(" and ")" in arg:
             arg_list = arg.split('.')
